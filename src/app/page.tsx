@@ -1,8 +1,8 @@
 "use client";
 
 import MarketingPricing from "@/ui-components/MarketingPricing";
-import { ThemeProvider } from "@aws-amplify/ui-react";
-import { studioTheme } from "@/ui-components";
+import Frame437 from "@/ui-components/Frame437";
+
 import "@aws-amplify/ui-react/styles.css";
 import { Amplify } from "aws-amplify";
 import awsconfig from "@/aws-exports";
@@ -10,10 +10,9 @@ Amplify.configure(awsconfig);
 
 export default function Home() {
   return (
-    <main>
-      <ThemeProvider theme={studioTheme}>
-        <MarketingPricing />
-      </ThemeProvider>
-    </main>
+    <div className="flex flex-col gap-4">
+      <MarketingPricing />
+      <Frame437 />
+    </div>
   );
 }
