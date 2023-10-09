@@ -1,7 +1,6 @@
 "use client";
 
-import MarketingPricing from "@/ui-components/MarketingPricing";
-import Frame437 from "@/ui-components/Frame437";
+import { CTASection, Frame437 } from "@/ui-components";
 
 import "@aws-amplify/ui-react/styles.css";
 import { Amplify } from "aws-amplify";
@@ -11,7 +10,7 @@ Amplify.configure(awsconfig);
 export default function Home() {
   return (
     <div className="flex flex-col gap-4">
-      <MarketingPricing />
+      <CTASection />
       <Frame437 />
     </div>
   );
